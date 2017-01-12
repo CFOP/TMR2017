@@ -1,0 +1,3 @@
+Solamente un arduino conectado a la computadora
+Transmitter - El arduino desconectado manda valores en 8 pines.
+Receiver - El arduino conectado imprime los pines.

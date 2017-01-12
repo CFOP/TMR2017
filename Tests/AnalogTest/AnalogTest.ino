@@ -1,6 +1,6 @@
 void setup() {
   Serial.begin(9600);
-
+  
 }
 
 void loop() {
@@ -9,4 +9,5 @@ void loop() {
     Serial.print('\t');
   }
   Serial.print('\n');
+  delay(200);
 }
