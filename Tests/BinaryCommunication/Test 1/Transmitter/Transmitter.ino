@@ -1,5 +1,5 @@
-#define BEGIN 6
-bool n[8]= {0};
+#define BEGIN 2
+bool n[8]= {1,1,1,1,1,1,1,1};
 void setup() {
   for(int i=BEGIN; i<=BEGIN+7; i++)
     pinMode(i,OUTPUT);

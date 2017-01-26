@@ -1,4 +1,4 @@
-#define BEGIN 6
+#define BEGIN 41
 char p=0;
 char boolChar(){
   char c=0;
@@ -12,14 +12,17 @@ char boolChar(){
 void setup() {
   Serial.begin(9600);
   for(int i=BEGIN-1; i<=BEGIN+7; i++)
-    pinMode(i,INPUT);
+    pinMode(i,INPUT_PULLUP);
+  pinMode(36,INPUT);
 }
 
 void loop(){
   char a;
-  while(digitalRead(5));
-  a=boolChar();
-  if(a!=p)
+ // while(!digitalRead(40));
+  a=~boolChar();
+  if(p!=a)
     Serial.println(a);
-   p=a;
+  p=a;
+  //while(!digitalRead(36));
+  //while(digitalRead(36));
 }

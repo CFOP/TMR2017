@@ -1,4 +1,4 @@
-#define BEGIN 6
+#define BEGIN 3
 #define CHAR 'b'
 bool n[8];
 void charBool(char c){
@@ -12,21 +12,18 @@ void charBool(char c){
   }
 }
 void setup() {
-  Serial.begin(9600);
   for(int i=BEGIN-1; i<=BEGIN+7; i++)
     pinMode(i,OUTPUT);
 }
 
 void loop() {
   for(char j='a'; j<='z';j++){
-    pinMode(5, HIGH);
+    pinMode(2, HIGH);
     charBool(j);
-    pinMode(5, LOW);
     for(int i=0; i<8; i++){
       digitalWrite(i+BEGIN, n[i]);
-      Serial.print(n[i]);
     }
-    Serial.println(j);
+    pinMode(2, LOW);
     delay(200);
   }
 }

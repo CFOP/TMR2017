@@ -1,12 +1,14 @@
+bool led = true;
 void setup() {
   Serial.begin(9600);
-  pinMode(52, OUTPUT);
-  pinMode(50, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, INPUT);
+  pinMode(2, OUTPUT);
 }
 
 void loop() {
-  Serial.println(digitalRead(50));
-  if(digitalRead(50))
-    digitalWrite(52, 0);
-   else digitalWrite(52, 1);
+  led = digitalRead(5);
+  Serial.println(led);
+  digitalWrite(4,led);
+  digitalWrite(2,led);
 }
