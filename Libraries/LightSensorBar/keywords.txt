@@ -1,0 +1,5 @@
+LightSensorBar	KEYWORD1
+getLineDirection	KEYWORD2
+calibrate	KEYWORD2
+printRawValues	KEYWORD2
+printFilteredValues	KEYWORD2
