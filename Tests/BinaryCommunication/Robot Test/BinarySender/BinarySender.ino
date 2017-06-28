@@ -59,9 +59,8 @@ void setup() {
 }
 
 void loop() {
-  for(int i=0,r=1;i<9;i++){
+  for(int r=0;r<(1<<10)-1;r++){
     charBool(r);
-    r*=2;
     delay(1000);
   }
 }

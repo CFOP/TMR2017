@@ -1,7 +1,7 @@
 #define BEGIN 52
 unsigned int boolChar() {
   unsigned int c = 0;
-  for (int i = 0; i < 8; i++) {
+  for (int i = 0; i < 7; i++) {
     if (digitalRead(BEGIN-i)) {
       c += 1 << (i);
       Serial.print(0);
@@ -11,10 +11,11 @@ unsigned int boolChar() {
     }
   }
   Serial.print(!digitalRead(BEGIN-8));
+  Serial.print(" ");
+  Serial.print(c);
   Serial.println();
-  if(digitalRead(BEGIN-8))
-    return -c;
   return c;
+
 }
 void setup() {
   Serial.begin(9600);
